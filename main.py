@@ -16,7 +16,7 @@ def voltar_menu():
     
 def exibir_menu():
     #exibe o menu principal
-    print('Gerenciamento de Bilbioteca')
+    print('Gerenciamento de Biblioteca')
     print('1. Adicionar livro')
     print('2. Listar todos os livros')
     print('3. Buscar livro por título ou autor')
@@ -64,14 +64,66 @@ def listar_livros(biblioteca):
     voltar_menu()
     return biblioteca
     
-def buscar_livro():
-    #função para buscar um livro pelo autor ou título
-    print("Buscando Livro...")
+def buscar_livro(biblioteca): 
+    while True: #inicio de loop para tratar exceções
+        print("Buscando Livro...")
+        comando = input("Você deseja procurar pelo título do livro ou pelo autor?\n 1. Título | 2. Autor | 3. Sair para o Menu\n")
+        try:
+            comando = int(comando)
+            if comando == 1:
+                titulo = input("Qual o título do livro que está procurando?\n").strip().lower()
+                encontrados = list(filter(lambda livro: titulo in livro.titulo.strip().lower(), biblioteca)) #percorre a biblioteca com a função filter dentro dela procura pelo livro com o mesmo titulo
+                if encontrados:
+                    print("\nLivro(s) encontrado(s):")
+                    for livro in encontrados:
+                        print(livro)
+                        while True:
+                            editar = input("Deseja emprestar o livro?(S/N):") if livro.disponivel else input("Deseja devolver o livro?(S/N):")
+                            if editar == "S":
+                                editar_livro(livro)
+                                break
+                            elif editar == "N":
+                                voltar_menu()
+                                break
+                            else:
+                                print("Digite uma opção válida...")
+                else:
+                    print("\nNenhum livro encontrado com esse título.")
+                break
+            elif comando == 2:
+                autor = input("Qual o autor que está procurando?\n").strip().lower()
+                encontrados = list(filter(lambda livro: autor in livro.autor.strip().lower(), biblioteca)) #mesma coisa porem com o autor
+                if encontrados:
+                    print("\nLivro(s) encontrado(s):")
+                    for livro in encontrados:
+                        print(livro)
+                        while True:
+                            editar = input("Deseja emprestar o livro?(S/N):") if livro.disponivel else input("Deseja devolver o livro?(S/N):")
+                            if editar == "S":
+                                editar_livro(livro)
+                                break
+                            elif editar == "N":
+                                voltar_menu()
+                                break
+                            else:
+                                print("Digite uma opção válida...")
+                else:
+                    print("\nNenhum livro encontrado com esse autor.")
+                break
+            elif comando == 3:
+                voltar_menu()
+                break
+            else:
+                print("Digite uma opção válida")
+        except ValueError:
+            print("Digite uma opção válida")
     voltar_menu()
+
     
-def editar_livro():
+def editar_livro(livro):
     #função para editar o status do livro disponivel ou emprestado
     print("Editando Livro...")
+    livro.disponivel = not livro.disponivel
     voltar_menu()
 
 def salvar(biblioteca):
@@ -105,7 +157,7 @@ def chamar_tarefa(comando, biblioteca):
     elif comando == 2:
         listar_livros(biblioteca)
     elif comando == 3:
-        buscar_livro()
+        buscar_livro(biblioteca)
     elif comando == 4:
         editar_livro()
     elif comando == 5:

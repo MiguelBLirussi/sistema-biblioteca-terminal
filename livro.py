@@ -5,9 +5,9 @@ class Livro:
         self.autor = autor
         self.ano = ano
         self.disponivel = True
-        
+    
     def __str__(self):
-        return f'Título:{self.titulo}| Autor:{self.autor}| Ano:{self.ano}| Disponivel:{self.disponivel}'
+        return f'Título:{self.titulo}| Autor:{self.autor}| Ano:{self.ano}| Disponivel:{'✅' if self.disponivel else '❌'}'
     
     def emprestar(self):
         if self.disponivel:
