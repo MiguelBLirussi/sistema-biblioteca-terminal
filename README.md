@@ -28,11 +28,12 @@ Um projeto em Python com interface no terminal que simula o funcionamento de uma
 
 ## 🗂 Estrutura do Projeto
 
-# sistema-biblioteca-terminal/ ├── main.py 
-# Menu principal e interação com o usuário ├── livro.py 
-# Classe Livro e suas funcionalidades ├── biblioteca.py 
-# Classe Biblioteca para gerenciar os livros ├── dados.json 
-# Base de dados dos livros (gerado automaticamente) └── README.md # Este arquivo
+# sistema-biblioteca-terminal/ ├── main.py
+# └── README.md # Este arquivo
+# Menu principal e interação com o usuário ├── main.py 
+# Classe Livro e suas funcionalidades ├── livro.py
+# Classe Biblioteca para gerenciar os livros biblioteca.py 
+# Base de dados dos livros (gerado automaticamente) ├── dados.json
 
 
 ---
@@ -59,5 +60,5 @@ Integração com banco de dados SQLite
 Testes automatizados com unittest
 
 🧑‍💻 Autor
-Desenvolvido por MiguelBLirussi ✨
+Desenvolvido por Miguel Barreto Lirussi ✨
 
