@@ -45,9 +45,12 @@ Um projeto em Python com interface no terminal que simula o funcionamento de uma
 ```bash
 git clone https://github.com/MiguelBLirussi/sistema-biblioteca-terminal.git
 cd sistema-biblioteca-terminal
+'''
 
 2. Execute o sistema:
+'''bash
 python main.py
+'''
 
 💡 Próximas melhorias
 
