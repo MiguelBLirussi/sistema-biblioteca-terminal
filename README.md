@@ -48,10 +48,8 @@ cd sistema-biblioteca-terminal
 ```
 
 #2. Execute o sistema:
-
-```bash
 python main.py
-```
+
 ---
 
 ## 💡 Próximas melhorias
