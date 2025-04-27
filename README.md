@@ -40,20 +40,20 @@ Um projeto em Python com interface no terminal que simula o funcionamento de uma
 
 ## ▶️ Como Executar
 
-1. Clone o repositório:
+#1. Clone o repositório:
 
 ```bash
 git clone https://github.com/MiguelBLirussi/sistema-biblioteca-terminal.git
 cd sistema-biblioteca-terminal
+```
 
-
-2. Execute o sistema:
 ```bash
+#2. Execute o sistema:
 python main.py
 ```
 
 
-## 💡 Próximas melhorias
+💡 Próximas melhorias
 
 Sistema de logs (histórico de empréstimos)
 
@@ -63,5 +63,6 @@ Integração com banco de dados SQLite
 
 Testes automatizados com unittest
 
-## 🧑‍💻 Autor
-Desenvolvido por Miguel Barreto Lirussi ✨
+🧑‍💻 Autor
+Desenvolvido por MiguelBLirussi ✨
+
