@@ -47,13 +47,14 @@ git clone https://github.com/MiguelBLirussi/sistema-biblioteca-terminal.git
 cd sistema-biblioteca-terminal
 ```
 
-```bash
 #2. Execute o sistema:
+
+```bash
 python main.py
 ```
+---
 
-
-💡 Próximas melhorias
+## 💡 Próximas melhorias
 
 Sistema de logs (histórico de empréstimos)
 
@@ -63,6 +64,8 @@ Integração com banco de dados SQLite
 
 Testes automatizados com unittest
 
-🧑‍💻 Autor
+---
+
+## 🧑‍💻 Autor
 Desenvolvido por MiguelBLirussi ✨
 
