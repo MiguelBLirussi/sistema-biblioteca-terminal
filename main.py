@@ -1,4 +1,5 @@
 import sys
+import os
 import json
 from livro import Livro  #importa a classe Livro de outro arquivo
 
@@ -12,8 +13,10 @@ def main():
     
 def voltar_menu():
     #função para sinalizar o usuário que o programa voltara ao menu principal
-    print("Tarefa finalizada!\nVoltando ao Menu Principal...")
-    
+    print("\nTarefa finalizada!\nVoltando ao Menu Principal...")
+    jump = input("Aperte 'Enter' para voltar ao Menu Principal") #Eu sei, isso aqui é uma solução muito burra mas eu vou arrumar posteriormente
+    os.system('cls')
+        
 def exibir_menu():
     #exibe o menu principal
     print('Gerenciamento de Biblioteca')
@@ -61,6 +64,7 @@ def listar_livros(biblioteca):
         print("Listando Livros:")
         for livro in biblioteca:
             print(livro)  # aqui ele usa o __str__() da classe Livro
+        jump = input("Aperte 'Enter' para continuar.") #Eu sei isso aqui é uma solução muito burra mas eu vou arrumar posteriormente
     voltar_menu()
     return biblioteca
     
@@ -77,16 +81,6 @@ def buscar_livro(biblioteca):
                     print("\nLivro(s) encontrado(s):")
                     for livro in encontrados:
                         print(livro)
-                        while True:
-                            editar = input("Deseja emprestar o livro?(S/N):") if livro.disponivel else input("Deseja devolver o livro?(S/N):")
-                            if editar == "S":
-                                editar_livro(livro)
-                                break
-                            elif editar == "N":
-                                voltar_menu()
-                                break
-                            else:
-                                print("Digite uma opção válida...")
                 else:
                     print("\nNenhum livro encontrado com esse título.")
                 break
@@ -97,16 +91,6 @@ def buscar_livro(biblioteca):
                     print("\nLivro(s) encontrado(s):")
                     for livro in encontrados:
                         print(livro)
-                        while True:
-                            editar = input("Deseja emprestar o livro?(S/N):") if livro.disponivel else input("Deseja devolver o livro?(S/N):")
-                            if editar == "S":
-                                editar_livro(livro)
-                                break
-                            elif editar == "N":
-                                voltar_menu()
-                                break
-                            else:
-                                print("Digite uma opção válida...")
                 else:
                     print("\nNenhum livro encontrado com esse autor.")
                 break
@@ -119,11 +103,17 @@ def buscar_livro(biblioteca):
             print("Digite uma opção válida")
     voltar_menu()
 
-    
-def editar_livro(livro):
+def editar_livro(biblioteca):
     #função para editar o status do livro disponivel ou emprestado
-    print("Editando Livro...")
-    livro.disponivel = not livro.disponivel
+    id = input("Digite o ID do livro que deseja editar: ")
+    try:
+        int(id)
+        for livro in biblioteca:
+            if id == livro.id:
+                print("Editando Livro...")
+                livro.disponivel = not livro.disponivel
+    except ValueError:
+        print("Digite um ID válido")
     voltar_menu()
 
 def salvar(biblioteca):
@@ -148,6 +138,7 @@ def carregar_biblioteca(biblioteca):
         print("Biblioteca carregada com sucesso!")
     except FileNotFoundError:
         print("Nenhum arquivo encontrado. Criando uma nova biblioteca.")
+    voltar_menu()
     return biblioteca
 
 def chamar_tarefa(comando, biblioteca):
@@ -159,7 +150,7 @@ def chamar_tarefa(comando, biblioteca):
     elif comando == 3:
         buscar_livro(biblioteca)
     elif comando == 4:
-        editar_livro()
+        editar_livro(biblioteca)
     elif comando == 5:
         salvar(biblioteca)
     elif comando == 6:
