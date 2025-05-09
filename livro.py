@@ -1,3 +1,6 @@
+from datetime import datetime
+agora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
 class Livro:
     #Atributos da classe
     
@@ -18,12 +21,13 @@ class Livro:
         if self.disponivel:
             self.disponivel = False
             print("Emprestando Livro...")
-        else:
-            print("O livro não está disponivel...")
-            
+            return True
+        return False
+      
     def devolver(self):
         if not self.disponivel:
             self.disponivel = True
+            
             print("Devolvendo Livro...")
         else:
             print("Você não pode devolver esse livro, ele não estava emprestado...")
@@ -48,6 +52,4 @@ class Livro:
             if dados["id"] >= Livro._id_counter:
                 Livro._id_counter = dados["id"] + 1
         return livro
-
-
         

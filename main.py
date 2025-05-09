@@ -6,10 +6,11 @@ from livro import Livro  #importa a classe Livro de outro arquivo
 def main():
     #função principal do programa
     biblioteca = []
+    biblioteca = carregar_biblioteca(biblioteca)
     while True:
         exibir_menu()
         comando = tarefa_desejada()
-        biblioteca = chamar_tarefa(comando,biblioteca)
+        chamar_tarefa(comando,biblioteca)
     
 def voltar_menu():
     #função para sinalizar o usuário que o programa voltara ao menu principal
@@ -64,7 +65,6 @@ def listar_livros(biblioteca):
         print("Listando Livros:")
         for livro in biblioteca:
             print(livro)  # aqui ele usa o __str__() da classe Livro
-        jump = input("Aperte 'Enter' para continuar.") #Eu sei isso aqui é uma solução muito burra mas eu vou arrumar posteriormente
     voltar_menu()
     return biblioteca
     
@@ -104,44 +104,58 @@ def buscar_livro(biblioteca):
     voltar_menu()
 
 def editar_livro(biblioteca):
-    #função para editar o status do livro disponivel ou emprestado
-    id = input("Digite o ID do livro que deseja editar: ")
-    try:
-        int(id)
-        for livro in biblioteca:
-            if id == livro.id:
-                print("Editando Livro...")
-                livro.disponivel = not livro.disponivel
-    except ValueError:
-        print("Digite um ID válido")
+    # função para editar o status do livro (disponível/emprestado)
+    id_desejado = input("Digite o ID do livro que deseja emprestar ou devolver: ")
+    encontrado = False  # flag para saber se encontrou o livro
+
+    for livro in biblioteca:
+        if str(livro.id) == id_desejado:
+            encontrado = True
+            if livro.disponivel:
+                Livro.emprestar(livro)
+            elif not livro.disponivel:
+                Livro.devolver(livro)
+            status = "disponível" if livro.disponivel else "emprestado"
+            print(f"O livro '{livro.titulo}' agora está marcado como {status}.")
+    if not encontrado:
+        print(f"Nenhum livro com o ID '{id_desejado}' foi encontrado.")
+
     voltar_menu()
 
 def salvar(biblioteca):
-    # salva a biblioteca em um arquivo JSON
-    livros_dict = [livro.to_dict() for livro in biblioteca]
-    with open("biblioteca.json", "w") as file:
-        json.dump(livros_dict, file, indent=4)
-    print("Biblioteca salva com sucesso!")
+     # salva a biblioteca em um arquivo JSON
+    try:
+        livros_dict = [livro.to_dict() for livro in biblioteca]
+        with open("biblioteca.json", "w", encoding="utf-8") as file:
+            json.dump(livros_dict, file, indent=4, ensure_ascii=False)
+        print("📚 Biblioteca salva com sucesso!")
+    except Exception as e:
+        print(f"❌ Erro ao salvar a biblioteca: {e}")
     voltar_menu()
 
 def fechar_programa():
     #encerra o programa
     print("Fechando o sistema...")
     sys.exit()
-    
+
 def carregar_biblioteca(biblioteca):
     # Carrega os livros de um arquivo JSON
     try:
-        with open("biblioteca.json", "r") as file:
+        with open("biblioteca.json", "r", encoding="utf-8") as file:
             livros_dict = json.load(file)
             biblioteca = [Livro.from_dict(livro) for livro in livros_dict]
-        print("Biblioteca carregada com sucesso!")
+        print(f"📂 {len(biblioteca)} livro(s) carregado(s) com sucesso!")
     except FileNotFoundError:
-        print("Nenhum arquivo encontrado. Criando uma nova biblioteca.")
+        print("⚠️ Arquivo não encontrado. Uma nova biblioteca será criada.")
+    except json.JSONDecodeError:
+        print("❌ Erro ao ler o arquivo JSON. O conteúdo pode estar corrompido.")
+    except Exception as e:
+        print(f"❌ Erro inesperado ao carregar a biblioteca: {e}")
     voltar_menu()
     return biblioteca
 
-def chamar_tarefa(comando, biblioteca):
+
+def chamar_tarefa(comando,biblioteca):
     #recebe o valor de comando e executa a função desejada
     if comando == 1:
         adicionar_livro(biblioteca)
