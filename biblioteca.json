@@ -1,352 +1,411 @@
 [
-  {
-    "id": 1000,
-    "titulo": "Dom Casmurro",
-    "autor": "Machado de Assis",
-    "ano": 1899,
-    "disponivel": true
-  },
-  {
-    "id": 1001,
-    "titulo": "O Cortiço",
-    "autor": "Aluísio Azevedo",
-    "ano": 1890,
-    "disponivel": true
-  },
-  {
-    "id": 1002,
-    "titulo": "Capitães da Areia",
-    "autor": "Jorge Amado",
-    "ano": 1937,
-    "disponivel": true
-  },
-  {
-    "id": 1003,
-    "titulo": "Grande Sertão: Veredas",
-    "autor": "João Guimarães Rosa",
-    "ano": 1956,
-    "disponivel": true
-  },
-  {
-    "id": 1004,
-    "titulo": "Memórias Póstumas de Brás Cubas",
-    "autor": "Machado de Assis",
-    "ano": 1881,
-    "disponivel": true
-  },
-  {
-    "id": 1005,
-    "titulo": "O Primo Basílio",
-    "autor": "Eça de Queirós",
-    "ano": 1878,
-    "disponivel": true
-  },
-  {
-    "id": 1006,
-    "titulo": "O Guarani",
-    "autor": "José de Alencar",
-    "ano": 1857,
-    "disponivel": true
-  },
-  {
-    "id": 1007,
-    "titulo": "Iracema",
-    "autor": "José de Alencar",
-    "ano": 1865,
-    "disponivel": true
-  },
-  {
-    "id": 1008,
-    "titulo": "Senhora",
-    "autor": "José de Alencar",
-    "ano": 1875,
-    "disponivel": true
-  },
-  {
-    "id": 1009,
-    "titulo": "A Moreninha",
-    "autor": "Joaquim Manuel de Macedo",
-    "ano": 1844,
-    "disponivel": true
-  },
-  {
-    "id": 1010,
-    "titulo": "Vidas Secas",
-    "autor": "Graciliano Ramos",
-    "ano": 1938,
-    "disponivel": true
-  },
-  {
-    "id": 1011,
-    "titulo": "A Hora da Estrela",
-    "autor": "Clarice Lispector",
-    "ano": 1977,
-    "disponivel": true
-  },
-  {
-    "id": 1012,
-    "titulo": "O Ateneu",
-    "autor": "Raul Pompeia",
-    "ano": 1888,
-    "disponivel": true
-  },
-  {
-    "id": 1013,
-    "titulo": "Marília de Dirceu",
-    "autor": "Tomás Antônio Gonzaga",
-    "ano": 1792,
-    "disponivel": true
-  },
-  {
-    "id": 1014,
-    "titulo": "Os Sertões",
-    "autor": "Euclides da Cunha",
-    "ano": 1902,
-    "disponivel": true
-  },
-  {
-    "id": 1015,
-    "titulo": "Auto da Compadecida",
-    "autor": "Ariano Suassuna",
-    "ano": 1955,
-    "disponivel": true
-  },
-  {
-    "id": 1016,
-    "titulo": "Sagarana",
-    "autor": "João Guimarães Rosa",
-    "ano": 1946,
-    "disponivel": true
-  },
-  {
-    "id": 1017,
-    "titulo": "O Mulato",
-    "autor": "Aluísio Azevedo",
-    "ano": 1881,
-    "disponivel": true
-  },
-  {
-    "id": 1018,
-    "titulo": "Triste Fim de Policarpo Quaresma",
-    "autor": "Lima Barreto",
-    "ano": 1915,
-    "disponivel": true
-  },
-  {
-    "id": 1019,
-    "titulo": "Lusíadas",
-    "autor": "Luís Vaz de Camões",
-    "ano": 1572,
-    "disponivel": true
-  },
-  {
-    "id": 1020,
-    "titulo": "O Alienista",
-    "autor": "Machado de Assis",
-    "ano": 1882,
-    "disponivel": true
-  },
-  {
-    "id": 1021,
-    "titulo": "Quincas Borba",
-    "autor": "Machado de Assis",
-    "ano": 1891,
-    "disponivel": true
-  },
-  {
-    "id": 1022,
-    "titulo": "A Relíquia",
-    "autor": "Eça de Queirós",
-    "ano": 1887,
-    "disponivel": true
-  },
-  {
-    "id": 1023,
-    "titulo": "Incidente em Antares",
-    "autor": "Erico Verissimo",
-    "ano": 1971,
-    "disponivel": true
-  },
-  {
-    "id": 1024,
-    "titulo": "Clarissa",
-    "autor": "Érico Veríssimo",
-    "ano": 1933,
-    "disponivel": true
-  },
-  {
-    "id": 1025,
-    "titulo": "O Tempo e o Vento",
-    "autor": "Érico Veríssimo",
-    "ano": 1949,
-    "disponivel": true
-  },
-  {
-    "id": 1026,
-    "titulo": "A Rosa do Povo",
-    "autor": "Carlos Drummond de Andrade",
-    "ano": 1945,
-    "disponivel": true
-  },
-  {
-    "id": 1027,
-    "titulo": "Macunaíma",
-    "autor": "Mário de Andrade",
-    "ano": 1928,
-    "disponivel": true
-  },
-  {
-    "id": 1028,
-    "titulo": "Pauliceia Desvairada",
-    "autor": "Mário de Andrade",
-    "ano": 1922,
-    "disponivel": true
-  },
-  {
-    "id": 1029,
-    "titulo": "Alguma Poesia",
-    "autor": "Carlos Drummond de Andrade",
-    "ano": 1930,
-    "disponivel": true
-  },
-  {
-    "id": 1030,
-    "titulo": "Felicidade Clandestina",
-    "autor": "Clarice Lispector",
-    "ano": 1971,
-    "disponivel": true
-  },
-  {
-    "id": 1031,
-    "titulo": "Laços de Família",
-    "autor": "Clarice Lispector",
-    "ano": 1960,
-    "disponivel": true
-  },
-  {
-    "id": 1032,
-    "titulo": "O Encontro Marcado",
-    "autor": "Fernando Sabino",
-    "ano": 1956,
-    "disponivel": true
-  },
-  {
-    "id": 1033,
-    "titulo": "Eles Eram Muitos Cavalos",
-    "autor": "Luiz Ruffato",
-    "ano": 2001,
-    "disponivel": true
-  },
-  {
-    "id": 1034,
-    "titulo": "Doidas e Santas",
-    "autor": "Martha Medeiros",
-    "ano": 2008,
-    "disponivel": true
-  },
-  {
-    "id": 1035,
-    "titulo": "O Seminarista",
-    "autor": "Bernardo Guimarães",
-    "ano": 1872,
-    "disponivel": true
-  },
-  {
-    "id": 1036,
-    "titulo": "A Escrava Isaura",
-    "autor": "Bernardo Guimarães",
-    "ano": 1875,
-    "disponivel": true
-  },
-  {
-    "id": 1037,
-    "titulo": "Cidade de Deus",
-    "autor": "Paulo Lins",
-    "ano": 1997,
-    "disponivel": true
-  },
-  {
-    "id": 1038,
-    "titulo": "Estorvo",
-    "autor": "Chico Buarque",
-    "ano": 1991,
-    "disponivel": true
-  },
-  {
-    "id": 1039,
-    "titulo": "Budapeste",
-    "autor": "Chico Buarque",
-    "ano": 2003,
-    "disponivel": true
-  },
-  {
-    "id": 1040,
-    "titulo": "Leite Derramado",
-    "autor": "Chico Buarque",
-    "ano": 2009,
-    "disponivel": true
-  },
-  {
-    "id": 1041,
-    "titulo": "Mar Me Quer",
-    "autor": "Mia Couto",
-    "ano": 1998,
-    "disponivel": true
-  },
-  {
-    "id": 1042,
-    "titulo": "Terra Sonâmbula",
-    "autor": "Mia Couto",
-    "ano": 1992,
-    "disponivel": true
-  },
-  {
-    "id": 1043,
-    "titulo": "O Fio das Missangas",
-    "autor": "Mia Couto",
-    "ano": 2004,
-    "disponivel": true
-  },
-  {
-    "id": 1044,
-    "titulo": "O Alquimista",
-    "autor": "Paulo Coelho",
-    "ano": 1988,
-    "disponivel": true
-  },
-  {
-    "id": 1045,
-    "titulo": "Veronika Decide Morrer",
-    "autor": "Paulo Coelho",
-    "ano": 1998,
-    "disponivel": true
-  },
-  {
-    "id": 1046,
-    "titulo": "Onze Minutos",
-    "autor": "Paulo Coelho",
-    "ano": 2003,
-    "disponivel": true
-  },
-  {
-    "id": 1047,
-    "titulo": "Brida",
-    "autor": "Paulo Coelho",
-    "ano": 1990,
-    "disponivel": true
-  },
-  {
-    "id": 1048,
-    "titulo": "O Vendedor de Sonhos",
-    "autor": "Augusto Cury",
-    "ano": 2008,
-    "disponivel": true
-  },
-  {
-    "id": 1049,
-    "titulo": "Ansiedade",
-    "autor": "Augusto Cury",
-    "ano": 2012,
-    "disponivel": true
-  }
+    {
+        "id": 1000,
+        "titulo": "Dom Casmurro",
+        "autor": "Machado de Assis",
+        "ano": 1899,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1001,
+        "titulo": "O Cortiço",
+        "autor": "Aluísio Azevedo",
+        "ano": 1890,
+        "disponivel": true,
+        "historico": [
+            {
+                "Data:": "13-05-2025 01:05:59",
+                "Ação": "Emprestado"
+            },
+            {
+                "Data:": "13-05-2025 01:06:32",
+                "Ação": "Devolvido"
+            }
+        ]
+    },
+    {
+        "id": 1002,
+        "titulo": "Capitães da Areia",
+        "autor": "Jorge Amado",
+        "ano": 1937,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1003,
+        "titulo": "Grande Sertão: Veredas",
+        "autor": "João Guimarães Rosa",
+        "ano": 1956,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1004,
+        "titulo": "Memórias Póstumas de Brás Cubas",
+        "autor": "Machado de Assis",
+        "ano": 1881,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1005,
+        "titulo": "O Primo Basílio",
+        "autor": "Eça de Queirós",
+        "ano": 1878,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1006,
+        "titulo": "O Guarani",
+        "autor": "José de Alencar",
+        "ano": 1857,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1007,
+        "titulo": "Iracema",
+        "autor": "José de Alencar",
+        "ano": 1865,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1008,
+        "titulo": "Senhora",
+        "autor": "José de Alencar",
+        "ano": 1875,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1009,
+        "titulo": "A Moreninha",
+        "autor": "Joaquim Manuel de Macedo",
+        "ano": 1844,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1010,
+        "titulo": "Vidas Secas",
+        "autor": "Graciliano Ramos",
+        "ano": 1938,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1011,
+        "titulo": "A Hora da Estrela",
+        "autor": "Clarice Lispector",
+        "ano": 1977,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1012,
+        "titulo": "O Ateneu",
+        "autor": "Raul Pompeia",
+        "ano": 1888,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1013,
+        "titulo": "Marília de Dirceu",
+        "autor": "Tomás Antônio Gonzaga",
+        "ano": 1792,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1014,
+        "titulo": "Os Sertões",
+        "autor": "Euclides da Cunha",
+        "ano": 1902,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1015,
+        "titulo": "Auto da Compadecida",
+        "autor": "Ariano Suassuna",
+        "ano": 1955,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1016,
+        "titulo": "Sagarana",
+        "autor": "João Guimarães Rosa",
+        "ano": 1946,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1017,
+        "titulo": "O Mulato",
+        "autor": "Aluísio Azevedo",
+        "ano": 1881,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1018,
+        "titulo": "Triste Fim de Policarpo Quaresma",
+        "autor": "Lima Barreto",
+        "ano": 1915,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1019,
+        "titulo": "Lusíadas",
+        "autor": "Luís Vaz de Camões",
+        "ano": 1572,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1020,
+        "titulo": "O Alienista",
+        "autor": "Machado de Assis",
+        "ano": 1882,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1021,
+        "titulo": "Quincas Borba",
+        "autor": "Machado de Assis",
+        "ano": 1891,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1022,
+        "titulo": "A Relíquia",
+        "autor": "Eça de Queirós",
+        "ano": 1887,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1023,
+        "titulo": "Incidente em Antares",
+        "autor": "Erico Verissimo",
+        "ano": 1971,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1024,
+        "titulo": "Clarissa",
+        "autor": "Érico Veríssimo",
+        "ano": 1933,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1025,
+        "titulo": "O Tempo e o Vento",
+        "autor": "Érico Veríssimo",
+        "ano": 1949,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1026,
+        "titulo": "A Rosa do Povo",
+        "autor": "Carlos Drummond de Andrade",
+        "ano": 1945,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1027,
+        "titulo": "Macunaíma",
+        "autor": "Mário de Andrade",
+        "ano": 1928,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1028,
+        "titulo": "Pauliceia Desvairada",
+        "autor": "Mário de Andrade",
+        "ano": 1922,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1029,
+        "titulo": "Alguma Poesia",
+        "autor": "Carlos Drummond de Andrade",
+        "ano": 1930,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1030,
+        "titulo": "Felicidade Clandestina",
+        "autor": "Clarice Lispector",
+        "ano": 1971,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1031,
+        "titulo": "Laços de Família",
+        "autor": "Clarice Lispector",
+        "ano": 1960,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1032,
+        "titulo": "O Encontro Marcado",
+        "autor": "Fernando Sabino",
+        "ano": 1956,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1033,
+        "titulo": "Eles Eram Muitos Cavalos",
+        "autor": "Luiz Ruffato",
+        "ano": 2001,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1034,
+        "titulo": "Doidas e Santas",
+        "autor": "Martha Medeiros",
+        "ano": 2008,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1035,
+        "titulo": "O Seminarista",
+        "autor": "Bernardo Guimarães",
+        "ano": 1872,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1036,
+        "titulo": "A Escrava Isaura",
+        "autor": "Bernardo Guimarães",
+        "ano": 1875,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1037,
+        "titulo": "Cidade de Deus",
+        "autor": "Paulo Lins",
+        "ano": 1997,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1038,
+        "titulo": "Estorvo",
+        "autor": "Chico Buarque",
+        "ano": 1991,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1039,
+        "titulo": "Budapeste",
+        "autor": "Chico Buarque",
+        "ano": 2003,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1040,
+        "titulo": "Leite Derramado",
+        "autor": "Chico Buarque",
+        "ano": 2009,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1041,
+        "titulo": "Mar Me Quer",
+        "autor": "Mia Couto",
+        "ano": 1998,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1042,
+        "titulo": "Terra Sonâmbula",
+        "autor": "Mia Couto",
+        "ano": 1992,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1043,
+        "titulo": "O Fio das Missangas",
+        "autor": "Mia Couto",
+        "ano": 2004,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1044,
+        "titulo": "O Alquimista",
+        "autor": "Paulo Coelho",
+        "ano": 1988,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1045,
+        "titulo": "Veronika Decide Morrer",
+        "autor": "Paulo Coelho",
+        "ano": 1998,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1046,
+        "titulo": "Onze Minutos",
+        "autor": "Paulo Coelho",
+        "ano": 2003,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1047,
+        "titulo": "Brida",
+        "autor": "Paulo Coelho",
+        "ano": 1990,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1048,
+        "titulo": "O Vendedor de Sonhos",
+        "autor": "Augusto Cury",
+        "ano": 2008,
+        "disponivel": true,
+        "historico": []
+    },
+    {
+        "id": 1049,
+        "titulo": "Ansiedade",
+        "autor": "Augusto Cury",
+        "ano": 2012,
+        "disponivel": true,
+        "historico": []
+    }
 ]

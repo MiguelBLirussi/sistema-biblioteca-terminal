@@ -24,10 +24,11 @@ def exibir_menu():
     print('1. Adicionar livro')
     print('2. Listar todos os livros')
     print('3. Buscar livro por título ou autor')
-    print('4. Editar livros disponíveis')
-    print('5. Salvar')
-    print('6. Carregar')
-    print('7. Sair')
+    print('4. Emprestar ou devolver um livro')
+    print('5. Exibir histórico de empréstimos de um livro')
+    print('6. Salvar')
+    print('7. Carregar')
+    print('8. Sair')
     
 def tarefa_desejada():
     #recebe o o comando do usuário e retorna esse comando
@@ -36,7 +37,7 @@ def tarefa_desejada():
         comando = (input('Digite o número da opção desejada: '))
         try:
             comando = int(comando)
-            if comando > 0 and comando < 8:
+            if comando > 0 and comando < 9:
                 loop = False
                 return comando
             else:
@@ -119,7 +120,18 @@ def editar_livro(biblioteca):
             print(f"O livro '{livro.titulo}' agora está marcado como {status}.")
     if not encontrado:
         print(f"Nenhum livro com o ID '{id_desejado}' foi encontrado.")
+    voltar_menu()
 
+def exibir_historico(biblioteca):
+    id_desejado = input("Digite o ID do livro que deseja emprestar ou devolver: ")
+    encontrado = False  # flag para saber se encontrou o livro
+
+    for livro in biblioteca:
+        if str(livro.id) == id_desejado:
+            encontrado = True
+            Livro.exibir_historico(livro)
+    if not encontrado:
+        print(f"Nenhum livro com o ID '{id_desejado}' foi encontrado.")
     voltar_menu()
 
 def salvar(biblioteca):
@@ -166,10 +178,12 @@ def chamar_tarefa(comando,biblioteca):
     elif comando == 4:
         editar_livro(biblioteca)
     elif comando == 5:
-        salvar(biblioteca)
+        exibir_historico(biblioteca)
     elif comando == 6:
-        biblioteca= carregar_biblioteca(biblioteca)
+        salvar(biblioteca)
     elif comando == 7:
+        biblioteca= carregar_biblioteca(biblioteca)
+    elif comando == 8:
         fechar_programa()
     return biblioteca # Retorna a biblioteca no caso de nenhuma ação ser tomada
      
