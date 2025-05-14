@@ -6,7 +6,19 @@ from livro import Livro  #importa a classe Livro de outro arquivo
 def main():
     #função principal do programa
     biblioteca = []
-    biblioteca = carregar_biblioteca(biblioteca)
+    if os.path.exists("biblioteca.json"):
+        print("📚 Uma Biblioteca foi encontrada, deseja carregar os dados salvos?")
+        while True:
+            comando = input("1. SIM | 2. NÃO\n")
+            try:
+                comando = int(comando)
+                if comando == 1 or comando == 2:
+                    break
+            except:
+                print("Digite uma opção válida!")
+        if comando == 1:
+            biblioteca = carregar_biblioteca(biblioteca)
+    os.system("cls")
     while True:
         exibir_menu()
         comando = tarefa_desejada()
@@ -48,6 +60,7 @@ def tarefa_desejada():
             loop = True
             
 def adicionar_livro(biblioteca):
+    os.system("cls")
     #função para adicionar um novo livro
     print("Vamos adicionar um novo livro")
     titulo = input("Qual o nome do livro?\n")
@@ -59,6 +72,7 @@ def adicionar_livro(biblioteca):
     return biblioteca
     
 def listar_livros(biblioteca):
+    os.system("cls")
     # lista todos os livros da biblioteca
     if not biblioteca:
         print("Não há livros na biblioteca.")
@@ -69,7 +83,8 @@ def listar_livros(biblioteca):
     voltar_menu()
     return biblioteca
     
-def buscar_livro(biblioteca): 
+def buscar_livro(biblioteca):
+    os.system("cls")
     while True: #inicio de loop para tratar exceções
         print("Buscando Livro...")
         comando = input("Você deseja procurar pelo título do livro ou pelo autor?\n 1. Título | 2. Autor | 3. Sair para o Menu\n")
@@ -105,6 +120,7 @@ def buscar_livro(biblioteca):
     voltar_menu()
 
 def editar_livro(biblioteca):
+    os.system("cls")
     # função para editar o status do livro (disponível/emprestado)
     id_desejado = input("Digite o ID do livro que deseja emprestar ou devolver: ")
     encontrado = False  # flag para saber se encontrou o livro
@@ -123,6 +139,7 @@ def editar_livro(biblioteca):
     voltar_menu()
 
 def exibir_historico(biblioteca):
+    os.system("cls")
     id_desejado = input("Digite o ID do livro que deseja emprestar ou devolver: ")
     encontrado = False  # flag para saber se encontrou o livro
 
@@ -135,6 +152,7 @@ def exibir_historico(biblioteca):
     voltar_menu()
 
 def salvar(biblioteca):
+    os.system("cls")
      # salva a biblioteca em um arquivo JSON
     try:
         livros_dict = [livro.to_dict() for livro in biblioteca]
@@ -145,12 +163,26 @@ def salvar(biblioteca):
         print(f"❌ Erro ao salvar a biblioteca: {e}")
     voltar_menu()
 
-def fechar_programa():
+def fechar_programa(biblioteca):
+    os.system("cls")
     #encerra o programa
     print("Fechando o sistema...")
+    print("Fechar o programa vai fazer com que alterações sejam perdidas, deseja salvar?")
+    while True:
+        comando = input("1. Salvar | 2. Fechar\n")
+        try:
+            comando = int(comando)
+            if comando == 1 or comando == 2:
+                break
+        except:
+            print("Digite uma opção válida")
+    if comando == 1:
+        salvar(biblioteca)
+    os.system("cls")
     sys.exit()
 
 def carregar_biblioteca(biblioteca):
+    os.system("cls")
     # Carrega os livros de um arquivo JSON
     try:
         with open("biblioteca.json", "r", encoding="utf-8") as file:
@@ -184,7 +216,7 @@ def chamar_tarefa(comando,biblioteca):
     elif comando == 7:
         biblioteca= carregar_biblioteca(biblioteca)
     elif comando == 8:
-        fechar_programa()
+        fechar_programa(biblioteca)
     return biblioteca # Retorna a biblioteca no caso de nenhuma ação ser tomada
      
 if __name__ == "__main__":

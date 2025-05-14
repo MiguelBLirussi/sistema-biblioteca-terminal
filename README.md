@@ -31,8 +31,7 @@ Um projeto em Python com interface no terminal que simula o funcionamento de uma
 # sistema-biblioteca-terminal/
 # └── README.md # Este arquivo
 # Menu principal e interação com o usuário ├── main.py 
-# Classe Livro e suas funcionalidades ├── livro.py
-# Classe Biblioteca para gerenciar os livros biblioteca.py 
+# Classe Livro e suas funcionalidades ├── livro.py 
 # Base de dados dos livros (gerado automaticamente) ├── dados.json
 
 
